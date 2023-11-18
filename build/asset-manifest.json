@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c988ef07.css",
+    "main.js": "/static/js/main.d2b15729.js",
+    "static/media/discount-banner_4x.jpg": "/static/media/discount-banner_4x.082da2ba9426b9eb5334.jpg",
+    "static/media/cloud.png": "/static/media/cloud.58a7717bdb2e714c2d77.png",
+    "static/media/30.jpg": "/static/media/30.6af2293b0aa0a4bb6f31.jpg",
+    "static/media/online.png": "/static/media/online.95bdfcc1f3d808568343.png",
+    "static/media/Special.jpg": "/static/media/Special.69a2938b711e025425b1.jpg",
+    "static/media/Group 3.png": "/static/media/Group 3.7afbbc71fcccf2760f5c.png",
+    "static/media/1.jpg": "/static/media/1.a1ddaf160c0c6fd7968d.jpg",
+    "static/media/noprofile.jpg": "/static/media/noprofile.7fe14f0accd9979e3303.jpg",
+    "static/media/-21.png": "/static/media/-21.dc1c246588f5b08699ac.png",
+    "index.html": "/index.html",
+    "main.c988ef07.css.map": "/static/css/main.c988ef07.css.map",
+    "main.d2b15729.js.map": "/static/js/main.d2b15729.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c988ef07.css",
+    "static/js/main.d2b15729.js"
+  ]
+}
