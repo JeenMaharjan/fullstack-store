@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c988ef07.css",
-    "main.js": "/static/js/main.35257d73.js",
+    "main.js": "/static/js/main.6b9e1680.js",
     "static/media/discount-banner_4x.jpg": "/static/media/discount-banner_4x.082da2ba9426b9eb5334.jpg",
     "static/media/cloud.png": "/static/media/cloud.58a7717bdb2e714c2d77.png",
     "static/media/30.jpg": "/static/media/30.6af2293b0aa0a4bb6f31.jpg",
@@ -13,10 +13,10 @@
     "static/media/-21.png": "/static/media/-21.dc1c246588f5b08699ac.png",
     "index.html": "/index.html",
     "main.c988ef07.css.map": "/static/css/main.c988ef07.css.map",
-    "main.35257d73.js.map": "/static/js/main.35257d73.js.map"
+    "main.6b9e1680.js.map": "/static/js/main.6b9e1680.js.map"
   },
   "entrypoints": [
     "static/css/main.c988ef07.css",
-    "static/js/main.35257d73.js"
+    "static/js/main.6b9e1680.js"
   ]
 }
