@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const Cart = require("../models/cart");
 const Product = require("../models/product");
+const axios = require("axios")
 const Coupon = require("../models/coupon");
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
@@ -45,21 +46,40 @@ exports.createPaymentIntent = async(req, res) => {
 }
 
 exports.khaltiPayment = async(req, res) => {
-    console.log("createPaymentIntent =====> ", req.body);
-    const { token, amount } = req.body.payload;
-    const url = "https://khalti.com/api/v2/payment/verify/"
-
-    const data = {
-        "token": token,
-        "amount": amount
-    }
-
-    const headers = {
-        'Authorization': 'test_secret_key_d9a0973407b94505b4dba5b1344e9d79'
-    }
-
-    const response = req.create(url, data, headers)
-
-    res.json(response.data)
+    try {
+        const payload = req.body;
+        const khaltiResponse = await axios.post(
+          "https://a.khalti.com/api/v2/epayment/initiate/",
+          payload,
+          {
+            headers: {
+              Authorization: "Key 65b508574b354797a707e520afaf2530",
+             
+            },
+          }
+        );
+        console.log(khaltiResponse.data);
+        res.status(200).json(khaltiResponse.data);
+      } catch (error) {
+        console.error("Error:", error.response ? error.response.data : error.message);
+        res.status(error.response ? error.response.status : 500).json({
+          error: "Internal Server Error",
+        });
+      }
 
 }
+
+exports.successCallback = async (req, res) => {
+  try {
+      // Extract relevant information from the callback request
+      const { pidx, transaction_id, amount, mobile, purchase_order_id, purchase_order_name } = req.query;
+
+      // Store this information in your database
+      // ... (save to your database logic)
+
+      res.status(200).json({ pidx, transaction_id, amount, mobile, purchase_order_id, purchase_order_name });
+  } catch (error) {
+      console.error("Error:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+  }
+};

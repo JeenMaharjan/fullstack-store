@@ -23,7 +23,8 @@ const {
     getUser,
     uploadImage,
     findUsers,
-    findone
+    findone,
+    createOrderKhalti
 } = require("../controllers/user");
 
 router.post("/user/cart", authCheck, userCart); // save cart
@@ -40,6 +41,7 @@ router.post("/user/cart/coupon", authCheck, applyCouponToUserCart);
 router.post("/sendcoupon", authCheck, adminCheck, changeCoupon);
 
 router.post("/user/order", authCheck, createOrder);
+router.post("/user/order/khalti",authCheck,  createOrderKhalti);
 router.post("/user/cash-order", authCheck, createCashOrder); // cod
 router.get("/user/orders", authCheck, orders);
 router.put("/user/update-status/:id", authCheck, adminCheck, updateStatus);
